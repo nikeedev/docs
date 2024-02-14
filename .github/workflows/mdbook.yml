@@ -27,10 +27,14 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        echo "before checkout"
         ls
         git checkout -b gh-pages
+        echo "after checkout"
         ls
+        echo "before remove"
         rm -rf src book.toml publish.ps1 README.md
+        echo "after remove"
         ls
         mv book booktemp
         mv booktemp/ . 
