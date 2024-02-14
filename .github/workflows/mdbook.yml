@@ -1,9 +1,7 @@
 name: Build and Commit mdBook
 
-on:
-  push:
-    branches:
-      - main
+
+on: workflow_dispatch
 
 jobs:
   build:
