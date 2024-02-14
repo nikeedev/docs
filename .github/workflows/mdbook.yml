@@ -27,9 +27,11 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-
+        ls
         git checkout -b gh-pages
+        ls
         rm -rf src book.toml publish.ps1 README.md
+        ls
         mv book booktemp
         mv booktemp/ . 
         rm -rf booktemp
