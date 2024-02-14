@@ -27,6 +27,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git config pull.rebase true
         echo "before checkout"
         ls
         git checkout -b gh-pages
