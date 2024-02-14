@@ -29,9 +29,9 @@ jobs:
         git config --local user.name "GitHub Action"
 
         git checkout -b gh-pages
-        rm src book.toml publish.ps1 README.md
+        rm -rf src book.toml publish.ps1 README.md
         mv book/ . 
-        rm book
+        rm -rf book
         git add -A
-        git commit -m "Update"
+        git commit -m "Updated Docs"
         git push origin gh-pages
