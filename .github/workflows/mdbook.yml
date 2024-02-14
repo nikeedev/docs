@@ -30,7 +30,10 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
 
-        git checkout -b build-output
-        git add book
-        git commit -m "Update mdBook build"
-        git push origin build-output
+        git checkout -b gh-pages
+        rm src book.toml publish.ps1 README.md
+        mv book/ . 
+        rm book
+        git add -A
+        git commit -m "Update"
+        git push origin gh-pages
