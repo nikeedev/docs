@@ -41,4 +41,5 @@ jobs:
         rm -rf booktemp
         git add -A
         git commit -m "Updated Docs"
+        git pull origin gh-pages
         git push origin gh-pages
