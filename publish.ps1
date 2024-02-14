@@ -1,4 +1,4 @@
-if (-ne Test-Path $env:temp/book) {
+if (Test-Path $env:temp/book) {
     echo "doesnt exist"
     mkdir $env:temp/book
 }
