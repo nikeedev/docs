@@ -30,8 +30,9 @@ jobs:
 
         git checkout -b gh-pages
         rm -rf src book.toml publish.ps1 README.md
-        mv book/ . 
-        rm -rf book
+        mv book booktemp
+        mv booktemp/ . 
+        rm -rf booktemp
         git add -A
         git commit -m "Updated Docs"
         git push origin gh-pages
