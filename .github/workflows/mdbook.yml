@@ -37,7 +37,7 @@ jobs:
         echo "after remove"
         ls
         mv book booktemp
-        mv booktemp/ . 
+        mv booktemp/* . 
         rm -rf booktemp
         git add -A
         git commit -m "Updated Docs"
