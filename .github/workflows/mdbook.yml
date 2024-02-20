@@ -8,6 +8,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: 'Cleanup build folder'
+      run: |
+        git checkout -b gh-pages
+        ls -la ./
+        rm -rf ./* || true
+        rm -rf ./.??* || true
+        ls -la ./
+        git checkout -b master
+        
+
     - name: Checkout repository
       uses: actions/checkout@v2
 
@@ -16,10 +26,9 @@ jobs:
       with:
         rust-version: stable
 
-
     - name: Install mdBook
       run: cargo install mdbook
-
+    
     - name: Build mdBook
       run: mdbook build
 
