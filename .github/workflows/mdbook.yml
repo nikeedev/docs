@@ -26,7 +26,7 @@ jobs:
       run: |
         git checkout -b gh-pages
         rm -rf book/
-        git checkout -b master
+        git checkout master
     
 
     - name: Build the docs to HTML/JS/CSS
@@ -39,7 +39,7 @@ jobs:
         git config pull.rebase true
         echo "before checkout"
         ls
-        git checkout -b gh-pages
+        git checkout gh-pages
         echo "after checkout"
         ls
         echo "before remove"
