@@ -8,16 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 'Cleanup build folder'
-      run: |
-        git checkout -b gh-pages
-        ls -la ./
-        rm -rf ./* || true
-        rm -rf ./.??* || true
-        ls -la ./
-        git checkout -b master
-        
-
     - name: Checkout repository
       uses: actions/checkout@v2
 
@@ -31,7 +21,16 @@ jobs:
     
     - name: Build mdBook
       run: mdbook build
-
+    
+    - name: 'Cleanup build folder'
+      run: |
+        git checkout -b gh-pages
+        ls -la ./
+        rm -rf ./* || true
+        rm -rf ./.??* || true
+        ls -la ./
+        git checkout -b master
+        
     - name: Commit and Push Changes
       run: |
         git config --local user.email "action@github.com"
