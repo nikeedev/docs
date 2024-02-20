@@ -27,11 +27,20 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-
+        git config pull.rebase true
+        echo "before checkout"
+        ls
         git checkout -b gh-pages
-        rm src book.toml publish.ps1 README.md
-        mv book/ . 
-        rm book
+        echo "after checkout"
+        ls
+        echo "before remove"
+        rm -rf src book.toml publish.ps1 README.md
+        echo "after remove"
+        ls
+        mv book booktemp
+        mv booktemp/* . 
+        rm -rf booktemp
         git add -A
-        git commit -m "Update"
+        git commit -m "Updated Docs"
+        git pull origin gh-pages
         git push origin gh-pages
