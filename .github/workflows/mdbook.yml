@@ -37,12 +37,12 @@ jobs:
         echo "before checkout"
         ls
         git checkout gh-pages
-        git checkout master book/
+        rm book/ -rf
+        git checkout master -- book/
         echo "after checkout"
         ls
-        mv book booktemp
-        mv booktemp/* . 
-        rm -rf booktemp
+        mv book/* . 
+        rm -rf book/
         git add -A
         git commit -m "Updated Docs"
         git pull origin gh-pages
