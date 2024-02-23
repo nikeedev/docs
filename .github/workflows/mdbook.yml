@@ -37,6 +37,7 @@ jobs:
         git config pull.rebase true
         echo "before checkout"
         ls
+        git fetch
         git checkout gh-pages
         rm book/ -rf
         git checkout master -- book/
