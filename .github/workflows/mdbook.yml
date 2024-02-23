@@ -25,7 +25,9 @@ jobs:
         mdbook-catppuccin install
 
     - name: Build the docs to HTML/JS/CSS
-      run: mdbook build
+      run: |
+        rm -rf book/
+        mdbook build
         
     - name: Commit and Push Changes
       run: |
@@ -35,11 +37,8 @@ jobs:
         echo "before checkout"
         ls
         git checkout gh-pages
+        git checkout master book/
         echo "after checkout"
-        ls
-        echo "before remove"
-        rm -rf src book.toml publish.ps1 README.md
-        echo "after remove"
         ls
         mv book booktemp
         mv booktemp/* . 
