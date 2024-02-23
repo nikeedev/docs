@@ -14,3 +14,5 @@ assets_version = "2.1.0" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
 
 [output.html]
 additional-css = ['./theme/catppuccin.css']
+default-theme = "latte"
+preferred-dark-theme = "mocha"
