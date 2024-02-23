@@ -20,14 +20,9 @@ jobs:
       run: cargo install mdbook
 
     - name: Install mdbook-catppuccin
-      run: cargo install mdbook-catppuccin
-    
-    - name: 'Cleanup build folder'
       run: |
-        git checkout -b gh-pages
-        rm -rf book/
-        git checkout master
-    
+        cargo install mdbook-catppuccin
+        mdbook-catppuccin install
 
     - name: Build the docs to HTML/JS/CSS
       run: mdbook build
