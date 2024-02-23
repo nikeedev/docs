@@ -42,7 +42,7 @@ jobs:
         git add -A
         git commit -m "up"
         git fetch
-        git checkout gh-pages
+        git switch gh-pages -f
         rm book/ -rf
         git checkout master -- book/
         echo "after checkout"
