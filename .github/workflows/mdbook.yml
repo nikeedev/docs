@@ -19,9 +19,11 @@ jobs:
     - name: Install mdBook
       run: cargo install mdbook
 
-    - name: Install mdbook-catppuccin
+    - name: Install mdbook-themes and preprocessors 
       run: |
+        cargo install mdbook-admonish
         cargo install mdbook-catppuccin
+        cargo install mdbook-emojicodes
         mdbook-catppuccin install
 
     - name: Build the docs to HTML/JS/CSS
@@ -29,6 +31,7 @@ jobs:
         rm -rf book/
         mdbook-catppuccin install --force
         mdbook build
+        mdbook-admonish install
         
     - name: Commit and Push Changes
       run: |
