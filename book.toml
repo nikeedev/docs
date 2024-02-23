@@ -20,5 +20,4 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 
 [output.html]
 additional-css = ['./theme/catppuccin.css', './mdbook-admonish.css', './theme/catppuccin-admonish.css']
-default-theme = "latte"
-preferred-dark-theme = "mocha"
+default-theme = "mocha"
