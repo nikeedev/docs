@@ -38,6 +38,7 @@ jobs:
         echo "before checkout"
         ls
         git add -A
+        git commit -m "up"
         git fetch
         git checkout gh-pages
         rm book/ -rf
