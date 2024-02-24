@@ -27,10 +27,10 @@ jobs:
 
     - name: Build the docs to HTML/JS/CSS
       run: |
-        mdbook-catppuccin install --force
+        mdbook-admonish install
         ls
         ls theme
-        mdbook-admonish install
+        mdbook-catppuccin install --force
         ls
         ls theme
         mdbook build
