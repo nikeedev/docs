@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="latte" dir="ltr">
+<html lang="en" class="mocha" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -31,7 +31,10 @@
 
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./mdbook-admonish.css">
         <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+        <link rel="stylesheet" href=".\theme\catppuccin.css">
+        <link rel="stylesheet" href=".\theme\catppuccin-admonish.css">
 
     </head>
     <body class="sidebar-visible no-js">
@@ -39,7 +42,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "mocha" : "latte";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "mocha";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -64,7 +67,7 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('latte')
+            html.classList.remove('mocha')
             html.classList.add(theme);
             var body = document.querySelector('body');
             body.classList.remove('no-js')
@@ -91,7 +94,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="first_steps.html"><strong aria-hidden="true">1.</strong> First Steps</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Creating Your First Aioewa Addon</li><li class="chapter-item expanded "><a href="first_steps.html"><strong aria-hidden="true">1.</strong> First Steps</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="first_addon/creating_fork.html"><strong aria-hidden="true">1.1.</strong> Creating fork and setting up a new addon</a></li><li class="chapter-item expanded "><a href="first_addon/adding_code.html"><strong aria-hidden="true">1.2.</strong> Adding some code!</a></li><li class="chapter-item expanded "><a href="first_addon/publishing_pr.html"><strong aria-hidden="true">1.3.</strong> Send a PR to the main repository</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Reference Guide For Aioewa Addons</li><li class="chapter-item expanded "><a href="info_json.html"><strong aria-hidden="true">2.</strong> "info.json" File Reference</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
