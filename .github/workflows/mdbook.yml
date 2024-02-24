@@ -27,9 +27,12 @@ jobs:
 
     - name: Build the docs to HTML/JS/CSS
       run: |
-        rm -rf book/
         mdbook-catppuccin install --force
+        ls
+        ls theme
         mdbook-admonish install
+        ls
+        ls theme
         mdbook build
         
     - name: Commit and Push Changes
