@@ -44,11 +44,12 @@ jobs:
         git commit -m "up"
         git fetch
         git switch gh-pages -f
+        rm * -rf
         rm book/ -rf
         git checkout master -- book/
         echo "after checkout"
         ls
-        mv -f book/* . 
+        mv -rf book/* . 
         rm -rf book/
         git add -A
         git commit -m "Updated Docs"
