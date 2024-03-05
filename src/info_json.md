@@ -3,37 +3,31 @@
 `info.json` is the file that Aioewa uses to know about your addon, like what script files it uses and general information about your addon like name, description and credits for the creators of it. Within it you can also specify DAO settings which 
 
 
-```admonish error title="Do not use DAO yet!" 
-DAO is an new feature which is still in development, therefore use of it is very unstable Recommended to not be used yet. 
-```
-
-
-
 ## `info.json` syntax
 
 Name - Description - Code - Required - Property type
-
+Description:
 ## `AV` 
-- It basically specifies the version of the `info.json`. In the future, if the values of `info.jso`n will be changed and it could possibly break the addon if it uses old values, Aioewa can check if you use up-to-date `info.json`
+- Description: It basically specifies the version of the `info.json`. In the future, if the values of `info.jso`n will be changed and it could possibly break the addon if it uses old values, Aioewa can check if you use up-to-date `info.json`
 specification using `AV`.
 - Example: `"AV": "1"`
 - Required? ✅ 
 - Property Type: `string`
 
 ## `name` 
-- Name of your feature, will be used in the features list. 
+- Description: Name of your feature, will be used in the features list. 
 - Example: `"name": "Test Feature"` 
 - Required? ❌, but strongly recommended 
-- Property Type:`string`-
+- Property Type:`string`
 
 ## `description` 
-- Shows the description of the feature 
+- Description: Shows the description of the feature 
 - Example `"description": "This is my test feature" `
-- Required? ❌, but strongly recommended
+- Required? ❌, but recommended, how do people know what your addon is doing, hacking? :shrug:
 - Property Type: `string`
 
 ## `tags` 
-- Relevant tags to the addon, could be
+- Description: Relevant tags to the addon, like the addon being a beta addon you can add beta tag. 
 - Example: `"Tags": ["community", "testing"]`
 - Required? ❌
 - Property Type: `string[]`

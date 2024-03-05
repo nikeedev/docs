@@ -2,7 +2,7 @@
 
 ![](assets/aioewa_logo.png)
 
-Welcome dear reader to Aioewa's documentation website, here you will get the knowledge about creating your first ever addon using HTML, JS and CSS. 
+Welcome dear reader to Aioewa's documentation website, here you will get the knowledge about creating your first ever addon using HTML, JS and CSS. Settle back (or actually, don't), and change the theme clicking of the :paintbrush: button of top of this website to change the theme if you prefer a more darker or lighter theme.
 
 <br>
 

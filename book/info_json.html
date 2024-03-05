@@ -29,11 +29,9 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="./theme/catppuccin.css">
         <link rel="stylesheet" href="./mdbook-admonish.css">
+        <link rel="stylesheet" href="./theme/catppuccin.css">
         <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
-        <link rel="stylesheet" href=".\theme\catppuccin.css">
-        <link rel="stylesheet" href=".\theme\catppuccin-admonish.css">
 
     </head>
     <body class="sidebar-visible no-js">
@@ -133,12 +131,11 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
@@ -182,20 +179,12 @@
                     <main>
                         <h1 id="infojson-file-reference"><a class="header" href="#infojson-file-reference"><code>info.json</code> File Reference</a></h1>
 <p><code>info.json</code> is the file that Aioewa uses to know about your addon, like what script files it uses and general information about your addon like name, description and credits for the creators of it. Within it you can also specify DAO settings which</p>
-<div id="admonition-do-not-use-dao-yet" class="admonition admonish-danger">
-<div class="admonition-title">
-<p>Do not use DAO yet!</p>
-<p><a class="admonition-anchor-link" href="#admonition-do-not-use-dao-yet"></a></p>
-</div>
-<div>
-<p>DAO is an new feature which is still in development, therefore use of it is very unstable Recommended to not be used yet.</p>
-</div>
-</div>
 <h2 id="infojson-syntax"><a class="header" href="#infojson-syntax"><code>info.json</code> syntax</a></h2>
-<p>Name - Description - Code - Required - Property type</p>
+<p>Name - Description - Code - Required - Property type
+Description:</p>
 <h2 id="av"><a class="header" href="#av"><code>AV</code></a></h2>
 <ul>
-<li>It basically specifies the version of the <code>info.json</code>. In the future, if the values of <code>info.jso</code>n will be changed and it could possibly break the addon if it uses old values, Aioewa can check if you use up-to-date <code>info.json</code>
+<li>Description: It basically specifies the version of the <code>info.json</code>. In the future, if the values of <code>info.jso</code>n will be changed and it could possibly break the addon if it uses old values, Aioewa can check if you use up-to-date <code>info.json</code>
 specification using <code>AV</code>.</li>
 <li>Example: <code>"AV": "1"</code></li>
 <li>Required? ✅</li>
@@ -203,21 +192,21 @@ specification using <code>AV</code>.</li>
 </ul>
 <h2 id="name"><a class="header" href="#name"><code>name</code></a></h2>
 <ul>
-<li>Name of your feature, will be used in the features list.</li>
+<li>Description: Name of your feature, will be used in the features list.</li>
 <li>Example: <code>"name": "Test Feature"</code></li>
 <li>Required? ❌, but strongly recommended</li>
-<li>Property Type:<code>string</code>-</li>
+<li>Property Type:<code>string</code></li>
 </ul>
 <h2 id="description"><a class="header" href="#description"><code>description</code></a></h2>
 <ul>
-<li>Shows the description of the feature</li>
+<li>Description: Shows the description of the feature</li>
 <li>Example <code>"description": "This is my test feature" </code></li>
-<li>Required? ❌, but strongly recommended</li>
+<li>Required? ❌, but recommended, how do people know what your addon is doing, hacking? 🤷</li>
 <li>Property Type: <code>string</code></li>
 </ul>
 <h2 id="tags"><a class="header" href="#tags"><code>tags</code></a></h2>
 <ul>
-<li>Relevant tags to the addon, could be</li>
+<li>Description: Relevant tags to the addon, like the addon being a beta addon you can add beta tag.</li>
 <li>Example: <code>"Tags": ["community", "testing"]</code></li>
 <li>Required? ❌</li>
 <li>Property Type: <code>string[]</code></li>
@@ -252,6 +241,22 @@ specification using <code>AV</code>.</li>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
