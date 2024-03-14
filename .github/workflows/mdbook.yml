@@ -49,7 +49,7 @@ jobs:
         git checkout master -- book/
         echo "after checkout"
         ls
-        mv -rf book/* . 
+        mv -f book/* . 
         rm -rf book/
         git add -A
         git commit -m "Updated Docs"
