@@ -275,10 +275,12 @@ Here come the fun part:</li>
 <p>On next page we will see how we can use <code>IF_</code> setting and Javascript to do something even more interesting.</p>
 <p>Next page: <a href="first_addon/./adding_code.html">Adding some code!</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="adding-some-code"><a class="header" href="#adding-some-code">Adding some code!</a></h1>
+<p>Now as our addon is purely CSS code, we probably need to add some actually Javascript code.</p>
+<p>In your info.json you can specify <code>onTab</code> script which will be runned by the addon on every tab you have it.
+Info.json provides a lot of other settings, on of them is <code>IF_onTab</code>, which checks <strong>if</strong> it is meeting specific requirements which are specified by a Javascript script. You can for instance check if the website's domain is the one you want the addon to run on, or else. <code>onTab</code> can run perfectly fine without the <code>IF_</code> setting, but with it you can check whether the addon can run in that tab or no. Let's do something like this.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="send-a-pr-to-the-main-repository"><a class="header" href="#send-a-pr-to-the-main-repository">Send a PR to the main repository</a></h1>
 <p>Hm, looks like there is nothing here...</p>
 <p><em>why not? ¯\_(ツ)_/¯</em></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="send-a-pr-to-the-main-repository"><a class="header" href="#send-a-pr-to-the-main-repository">Send a PR to the main repository</a></h1>
-<p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="infojson-file-reference"><a class="header" href="#infojson-file-reference"><code>info.json</code> File Reference</a></h1>
 <p><code>info.json</code> is the file that Aioewa uses to know about your addon, like what script files it uses and general information about your addon like name, description and credits for the creators of it. Within it you can also specify DAO settings which</p>
 <h2 id="infojson-syntax"><a class="header" href="#infojson-syntax"><code>info.json</code> syntax</a></h2>
