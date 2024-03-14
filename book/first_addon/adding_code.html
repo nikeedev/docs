@@ -178,8 +178,9 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="adding-some-code"><a class="header" href="#adding-some-code">Adding some code!</a></h1>
-<p>Hm, looks like there is nothing here...</p>
-<p><em>why not? ¯\_(ツ)_/¯</em></p>
+<p>Now as our addon is purely CSS code, we probably need to add some actually Javascript code.</p>
+<p>In your info.json you can specify <code>onTab</code> script which will be runned by the addon on every tab you have it.
+Info.json provides a lot of other settings, on of them is <code>IF_onTab</code>, which checks <strong>if</strong> it is meeting specific requirements which are specified by a Javascript script. You can for instance check if the website's domain is the one you want the addon to run on, or else. <code>onTab</code> can run perfectly fine without the <code>IF_</code> setting, but with it you can check whether the addon can run in that tab or no. Let's do something like this.</p>
 
                     </main>
 
